@@ -1,15 +1,15 @@
 import java.util.*;
 
-public class DSAQueue implements Iterable
+public class DSAQueue<E> implements Iterable<E>
 {
-    private DSALinkedList list;
+    private DSALinkedList<E> list;
 
     DSAQueue()
     {
-        list = new DSALinkedList();
+        list = new DSALinkedList<E>();
     }
 
-    public Iterator iterator()
+    public Iterator<E> iterator()
     {
         return list.iterator();
     }
@@ -19,17 +19,17 @@ public class DSAQueue implements Iterable
         return list.isEmpty();
     }
 
-    public void enqueue(Object inObj)
+    public void enqueue(E inObj)
     {
         list.insertLast(inObj);
     }
 
-    public Object dequeue()
+    public E dequeue()
     {
         return list.removeFirst();
     }
 
-    public Object peak()
+    public E peak()
     {
         return list.peekFirst();
     }

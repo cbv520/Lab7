@@ -4,7 +4,7 @@ public class IteratorTestHarness
 {
     public static void main(String args[])
     {
-        DSALinkedList<String> list = new DSALinkedList();
+        DSALinkedList<String> list = new DSALinkedList<String>();
         list.insertLast(new String("1"));
         list.insertLast(new String("2"));
         list.insertLast(new String("3"));
@@ -14,9 +14,9 @@ public class IteratorTestHarness
         list.insertLast(new String("7"));
         
         Iterator iter = list.iterator();
-        for(Object o : list)
+        for(String s : list)
         {
-            System.out.println((String)o);
+            System.out.println(s);
         }
 
         //list.insert(new Integer(8));

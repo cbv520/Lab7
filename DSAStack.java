@@ -1,15 +1,15 @@
 import java.util.*;
 
-public class DSAStack implements Iterable
+public class DSAStack<E> implements Iterable<E>
 {
-    private DSALinkedList list;
+    private DSALinkedList<E> list;
 
     DSAStack()
     {
-        list = new DSALinkedList();
+        list = new DSALinkedList<E>();
     }
 
-    public Iterator iterator()
+    public Iterator<E> iterator()
     {
         return list.iterator();
     }
@@ -19,17 +19,17 @@ public class DSAStack implements Iterable
         return list.isEmpty();
     }
 
-    public void push(Object inObject)
+    public void push(E inObject)
     {
         list.insertFirst(inObject);
     }
 
-    public Object pop()
+    public E pop()
     {
         return list.removeFirst();
     }
 
-    public Object top()
+    public E top()
     {
         return list.peekFirst();
     }

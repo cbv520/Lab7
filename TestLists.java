@@ -8,9 +8,9 @@ public class TestLists
         String s4 = "4";
         String s5 = "5";
 
-        DSALinkedList list = new DSALinkedList();
-        DSAQueue queue = new DSAQueue();
-        DSAStack stack = new DSAStack();
+        DSALinkedList<String> list = new DSALinkedList<String>();
+        DSAQueue<String> queue = new DSAQueue<String>();
+        DSAStack<String> stack = new DSAStack<String>();
 
         System.out.println("-------------------");
         System.out.println("LINKED LIST TESTS");
